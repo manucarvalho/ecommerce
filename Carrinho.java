@@ -65,9 +65,10 @@ public class Carrinho {
 	}
 
 	public void inserirItem(Produto p) {
-		for (int i = 1; i<itens.length; i++) {
+		for (int i = 0; i<itens.length; i++) {
 			if (itens[i] == null) {
 				itens[i] = p;
+				break;
 			}
 		}
 		
@@ -77,7 +78,7 @@ public class Carrinho {
 	
 	public void confirmarCompra() {
 		status = "Confirmada";
-		for (int i = 1; i<itens.length; i++) {
+		for (int i = 0; i<itens.length; i++) {
 			itens[i].confirmaVenda();
 		}
 	}

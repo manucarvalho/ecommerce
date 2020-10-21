@@ -16,17 +16,18 @@ public class Aplicacao {
 		Carrinho carrinho;
 				
 		carrinho = new Carrinho(1, sdf.parse("08/10/2020"), 3);
+		
 		if (p1.isVendido() == false) {
 			carrinho.inserirItem(p1);
 		} else {
 			System.out.println("Produto já vendido.");
 		}
-		if (p1.isVendido() == false) {
+		if (p2.isVendido() == false) {
 			carrinho.inserirItem(p2);
 		} else {
 			System.out.println("Produto já vendido.");
 		}
-		if (p1.isVendido() == false) {
+		if (p3.isVendido() == false) {
 			carrinho.inserirItem(p3);
 		} else {
 			System.out.println("Produto já vendido.");
@@ -41,9 +42,19 @@ public class Aplicacao {
 		System.out.println("Dados da venda: " + carrinho);
 		System.out.println();
 		System.out.println("Dados do(s) produto(s): ");
-		System.out.println("Produto 1:" + p1);
+		/*System.out.println("Produto 1:" + p1);
 		System.out.println("\nProduto 2:" + p2);
-		System.out.println("\nProduto 3:" + p3);
-				
+		System.out.println("\nProduto 3:" + p3);*/
+		
+		/*for (int i=0; i<carrinho.getNumDeItens(); i++) {
+			System.out.printf("Produto %d: ", i+1);
+			System.out.print(carrinho.getItens()[i].toString());
+		}*/
+
+		for (Produto prods:carrinho.getItens()) {
+			System.out.print(prods);
+			System.out.println();
+	
+		}
 	}
 }
